@@ -6,7 +6,7 @@ $(function () {
 
     socket.emit(eventNames.GetAllDevicesEvent, 'devices');
 
-    $('#submitPayment').click(() => {
+    $('#submitPayment').click(function () {
         var device = $('#deviceList').val();
         socket.emit(eventNames.BeginCardReadEvent, device);
         $("#messages").val('');
